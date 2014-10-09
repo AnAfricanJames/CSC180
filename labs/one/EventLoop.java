@@ -17,6 +17,7 @@ public class EventLoop
 		
 		while(true)
 		{
+			///////////////
 			while(IsDone == false)
 			{
 				if (!tasksBegin.isEmpty())
@@ -34,7 +35,9 @@ public class EventLoop
 					IsDone = true;
 				}
 			}
+			///////////
 			
+			/////////
 			tasksEnd.offer(new DefaultState());
 			
 			while (IsDone == true)
@@ -54,7 +57,8 @@ public class EventLoop
 					IsDone = false;
 				}
 			}
-			
+			/////////////////
+			tasksBegin.offer(new DefaultState());
 		}
 	 }
 	
